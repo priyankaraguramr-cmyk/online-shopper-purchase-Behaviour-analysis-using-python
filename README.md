@@ -1,28 +1,52 @@
 # online-shopper-purchase-Behaviour-analysis-using-python
 Online Shoppers EDA Project
+
 Exploratory Data Analysis of Online Shoppers’ Purchasing Intention
+
 Description
+
 Many people visit an online shop, but only a few of them buy something. Every visitor who leaves without buying is a lost sale, and 
+
 the money spent to bring that visitor to the site is wasted too. This project studies one year of browsing sessions to find out what
+
 is different between visitors who buy and visitors who do not, and then suggests how the shop can improve its conversion rate.
+
 The data is the Online Shoppers Purchasing Intention Dataset from the UCI Machine Learning Repository. It has 12,330 sessions and 18 columns, 
+
 with numeric columns (page counts, time spent, bounce/exit rates, page value) and categorical columns (month, visitor type, traffic type,
+
 region and more). The target column is Revenue (renamed Purchased in the notebook), which says whether the session ended in a purchase.
+
 Key terms
 •Session: one visit of one person to the website.
+
 •Conversion rate: percentage of sessions that end in a purchase.
+
 •Bounce rate: visitors who open one page and leave immediately.
+
 •Exit rate: how often a page is the last page of a visit.
+
 •Page value: average value of the pages a visitor saw before buying.
+
 Project workflow
-1.Problem definition and dataset selection: domain is Sales and E-commerce; first look using head, shape, info, describe, isnull and duplicated.
+
+1.Problem definition and dataset selection: domain is Sales and E-commerce; first look using head, shape, info, 
+describe, isnull and duplicated.
+
 2.Data cleaning and pre-processing
+
 ◦No missing values or negative durations were found.
+
 ◦125 duplicate rows removed (12,330 to 12,205 rows).
+
 ◦Columns renamed (for example Revenue to Purchased).
+
 ◦True/False converted to 1/0; OS, Browser, Region and Traffic_Type converted to category.
+
 ◦New columns created: Total_Pages, Total_Duration, Avg_Time_Per_Page, Season, Engagement (Low / Medium / High / Very High).
+
 ◦Skewness checked; outliers kept because they are real heavy-browsing customers; log1p used only to make histograms readable.
+
 ◦Cleaned data saved as online_shoppers_cleaned.csv.
 3.EDA and visualizations (14 chart cells, 19 visuals)
 ◦Univariate: purchase outcome, visitor type pie chart, product-page time histogram (log scale), product pages boxplot, sessions per month.
